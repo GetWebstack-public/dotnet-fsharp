@@ -1,29 +1,61 @@
 # dotnet-fsharp
 
-A minimal web application built with F# and ASP.NET Core on .NET 8.
+A web API example built with [F#](https://fsharp.org/) and [ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/) — demonstrating the Minimal API pattern using a functional-first language on .NET 8.
 
-## Overview
+## Run with gws
 
-This project demonstrates building an ASP.NET Core web server using F#. It serves a simple "Hello World" response at the root endpoint using the Minimal API style.
+### 1. Install the GetWebstack CLI
 
-## Requirements
-
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-
-## Getting Started
+Install the [GetWebstack](https://getwebstack.com) CLI ([docs](https://getwebstack.com/docs) | [installation](https://getwebstack.com/docs/installation)):
 
 ```bash
-dotnet run
+curl -sSL https://getwebstack.com/install.sh | bash
 ```
 
-The server will start and listen on the default port. Visit `http://localhost:8080` to see the response.
+### 2. Clone the repository
 
-## Endpoints
+```bash
+git clone https://github.com/GetWebstack-public/dotnet-fsharp
+cd dotnet-fsharp
+```
 
-| Method | Path | Description           |
-|--------|------|-----------------------|
-| GET    | `/`  | Returns "Hello World" |
+### 3. Initialise from template setup
 
-## Dependencies
+```bash
+gws init --from-file gws.json
+```
 
-- `Microsoft.AspNetCore.OpenApi` 8.0.0
+### 4. Deploy the service
+
+```bash
+gws up
+```
+
+### 5. Stream logs
+
+```bash
+gws logs
+```
+
+### 6. See deployment status
+
+```bash
+gws status
+```
+
+## Other .NET projects
+
+| Project | Framework | Description |
+|---|---|---|
+| [dotnet-aspnet](https://github.com/GetWebstack-public/dotnet-aspnet) | [ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/) | Web API with OpenAPI support on .NET 9 |
+| [dotnet-blazor](https://github.com/GetWebstack-public/dotnet-blazor) | [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor) | Interactive web UI with C# and .NET 9 |
+| [dotnet-minimal-api](https://github.com/GetWebstack-public/dotnet-minimal-api) | [Minimal API](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis) | Lightweight HTTP API with minimal ceremony |
+
+## Other project families
+
+| Family | Repository | Description |
+|---|---|---|
+| Python | [python-projects](https://github.com/GetWebstack-public/python-projects) | FastAPI, Django, Flask, and more |
+| JS/TS Backend | [js-ts-backend](https://github.com/GetWebstack-public/js-ts-backend) | Express, NestJS, Fastify, and more |
+| JS/TS Frontend | [js-ts-frontend](https://github.com/GetWebstack-public/js-ts-frontend) | React, Next.js, Vue, and more |
+| Go | [go-projects](https://github.com/GetWebstack-public/go-projects) | Chi, Gin, Echo, Fiber, and more |
