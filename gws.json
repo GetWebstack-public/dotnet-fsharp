@@ -1,6 +1,9 @@
 {
   "name": "dotnet-fsharp",
   "version": "1.0.0",
+  "registry": {
+    "mode": "local"
+  },
   "services": [
     {
       "name": "dotnet-fsharp",
